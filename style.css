@@ -1,0 +1,21 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.button--previous {
+    float: left;
+}
+
+.button--next {
+    float: right;
+}

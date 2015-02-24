@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="calvinHobbesApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calvin and Hobbes Daily</title>
+        <meta name="description" content="A Calvin and Hobbes this day in history comic strip. Built with angular with data from /u/calvinbot on /r/calvinandhobbes.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.6.0/loading-bar.min.css">
+    </head>
+    <body ng-cloak>
+        <div class="container">
+            <header>
+                <p><strong>Calvin and Hobbes Daily</strong></p>
+            </header>
+
+
+            <div ng-controller="ComicController">
+                <p>{{ comic.title }}</p>
+
+                <div>
+                    <button ng-click="previous(comic.previous)" ng-hide="!comic.previous" class="button button--previous">&#8592; Previous</button>
+                    <button ng-click="next(comic.next)" ng-hide="!comic.next" class="button button--next">Next &#8594;</button>
+                </div>
+
+                <p>
+                    <a href="https://images.google.com/searchbyimage?image_url={{ comic.url }}" target="_blank">
+                        <img ng-src="{{ comic.url }}" alt="{{ comic.title }}">
+                    </a>
+                </p>
+
+                <p ng-show="error">There was an error in retrieving the daily comic. Please try again later</p>
+            </div>
+
+
+            <footer>
+                <p><small>Data from <a href="https://www.reddit.com/user/calvinbot">/u/calvinbot</a>.</small></p>
+            </footer>
+        </div>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.6.0/loading-bar.min.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/controllers/ComicController.js"></script>
+    </body>
+</html>
