@@ -12,10 +12,6 @@ img {
 }
 
 
-.button--previous {
-    float: left;
-}
-
-.button--next {
+.pull-right {
     float: right;
 }

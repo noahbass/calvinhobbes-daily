@@ -22,8 +22,8 @@
                 <p>{{ comic.title }}</p>
 
                 <div>
-                    <button ng-click="previous(comic.previous)" ng-hide="!comic.previous" class="button button--previous">&#8592; Previous</button>
-                    <button ng-click="next(comic.next)" ng-hide="!comic.next" class="button button--next">Next &#8594;</button>
+                    <button ng-click="previous(comic.previous)" ng-hide="!comic.previous" class="button">&#8592; Previous</button>
+                    <button ng-click="next(comic.next)" ng-hide="!comic.next" class="button pull-right">Next &#8594;</button>
                 </div>
 
                 <p>
@@ -37,7 +37,9 @@
 
 
             <footer>
-                <p><small>Data from <a href="https://www.reddit.com/user/calvinbot">/u/calvinbot</a>.</small></p>
+                <p>
+                    <small>Data from <a href="https://www.reddit.com/user/calvinbot">/u/calvinbot</a>.</small>
+                    <small class="pull-right"><a href="https://github.com/noahbass/calvinhobbes-daily">Fork me on GitHub</a>.</small></p>
             </footer>
         </div>
 
